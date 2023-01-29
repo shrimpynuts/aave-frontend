@@ -5,7 +5,7 @@ import { MainLayout } from 'src/layouts/MainLayout';
 import FaucetAssetsList from 'src/modules/faucet/FaucetAssetsList';
 import { FaucetTopPanel } from 'src/modules/faucet/FaucetTopPanel';
 
-import { ContentContainer } from '../src/components/ContentContainer';
+import { ContentContainer } from '../../../src/components/ContentContainer';
 
 export default function Faucet() {
   return (
