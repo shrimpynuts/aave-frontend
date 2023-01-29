@@ -473,6 +473,7 @@ msgstr "Cap reached. Lower supply amount"
 msgid "Choose one of the on-ramp services"
 msgstr "Choose one of the on-ramp services"
 
+#: src/modules/custom/RegisterDomain.tsx
 #: src/modules/dashboard/DashboardTopPanel.tsx
 msgid "Claim"
 msgstr "Claim"
@@ -1467,7 +1468,7 @@ msgstr "Received"
 msgid "Recipient address"
 msgstr "Recipient address"
 
-#: pages/index.page.tsx
+#: src/modules/custom/RegisterDomain.tsx
 msgid "Register your domain"
 msgstr "Register your domain"
 
@@ -2227,6 +2228,10 @@ msgstr "Version 2"
 #: src/components/MarketSwitcher.tsx
 msgid "Version 3"
 msgstr "Version 3"
+
+#: src/modules/custom/RegisterDomain.tsx
+msgid "View"
+msgstr "View"
 
 #: src/modules/governance/proposal/VotersListContainer.tsx
 msgid "View all votes"
