@@ -1,75 +1,34 @@
-import { Trans } from '@lingui/macro';
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { useEffect, useState } from 'react';
-import StyledToggleButton from 'src/components/StyledToggleButton';
-import StyledToggleButtonGroup from 'src/components/StyledToggleButtonGroup';
-import { usePermissions } from 'src/hooks/usePermissions';
+import { Paper, useTheme } from '@mui/material';
+import { ContentContainer } from 'src/components/ContentContainer';
+import { TopInfoPanel } from 'src/components/TopInfoPanel/TopInfoPanel';
+import { CustomLayout } from 'src/layouts/custom/CustomLayout';
+import RegisterDomain from 'src/modules/custom/RegisterDomain';
 
-import { ConnectWalletPaper } from '../src/components/ConnectWalletPaper';
-import { ContentContainer } from '../src/components/ContentContainer';
-import { MainLayout } from '../src/layouts/MainLayout';
-import { useWeb3Context } from '../src/libs/hooks/useWeb3Context';
-import { DashboardContentWrapper } from '../src/modules/dashboard/DashboardContentWrapper';
-import { DashboardTopPanel } from '../src/modules/dashboard/DashboardTopPanel';
-
-export default function Home() {
-  const { breakpoints } = useTheme();
-  const lg = useMediaQuery(breakpoints.up('lg'));
-
-  const { currentAccount, loading: web3Loading } = useWeb3Context();
-  const { isPermissionsLoading } = usePermissions();
-
-  const [mode, setMode] = useState<'supply' | 'borrow' | ''>('');
-
-  useEffect(() => {
-    if (!mode) setMode('supply');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lg]);
+export default function HomePage() {
+  const theme = useTheme();
 
   return (
     <>
-      <DashboardTopPanel />
-
+      <TopInfoPanel />
       <ContentContainer>
-        {currentAccount && !isPermissionsLoading && (
-          <Box
-            sx={{
-              display: { xs: 'flex', lg: 'none' },
-              justifyContent: { xs: 'center', xsm: 'flex-start' },
-              mb: { xs: 3, xsm: 4 },
-            }}
-          >
-            <StyledToggleButtonGroup
-              color="primary"
-              value={mode}
-              exclusive
-              onChange={(_, value) => setMode(value)}
-              sx={{ width: { xs: '100%', xsm: '359px' }, height: '44px' }}
-            >
-              <StyledToggleButton value="supply" disabled={mode === 'supply'}>
-                <Typography variant="subheader1">
-                  <Trans>Supply</Trans>
-                </Typography>
-              </StyledToggleButton>
-              <StyledToggleButton value="borrow" disabled={mode === 'borrow'}>
-                <Typography variant="subheader1">
-                  <Trans>Borrow</Trans>
-                </Typography>
-              </StyledToggleButton>
-            </StyledToggleButtonGroup>
-          </Box>
-        )}
-
-        {currentAccount && !isPermissionsLoading ? (
-          <DashboardContentWrapper isBorrow={mode === 'borrow'} />
-        ) : (
-          <ConnectWalletPaper loading={web3Loading} />
-        )}
+        <Paper
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
+            p: 4,
+            flex: 1,
+            backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : '',
+          }}
+        >
+          <RegisterDomain />
+        </Paper>
       </ContentContainer>
     </>
   );
 }
 
-Home.getLayout = function getLayout(page: React.ReactElement) {
-  return <MainLayout>{page}</MainLayout>;
+HomePage.getLayout = function getLayout(page: React.ReactElement) {
+  return <CustomLayout>{page}</CustomLayout>;
 };

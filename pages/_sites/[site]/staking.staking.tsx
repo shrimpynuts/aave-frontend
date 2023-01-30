@@ -13,14 +13,13 @@ import { StakeRewardClaimModal } from 'src/components/transactions/StakeRewardCl
 import { UnStakeModal } from 'src/components/transactions/UnStake/UnStakeModal';
 import { useModalContext } from 'src/hooks/useModal';
 import { MainLayout } from 'src/layouts/MainLayout';
+import { useWeb3Context } from 'src/libs/hooks/useWeb3Context';
 import { BuyWithFiat } from 'src/modules/staking/BuyWithFiat';
 import { GetABPToken } from 'src/modules/staking/GetABPToken';
 import { StakingHeader } from 'src/modules/staking/StakingHeader';
 import { StakingPanel } from 'src/modules/staking/StakingPanel';
 import { useRootStore, useStakeDataSubscription } from 'src/store/root';
 import { getNetworkConfig } from 'src/utils/marketsAndNetworksConfig';
-
-import { useWeb3Context } from '../src/libs/hooks/useWeb3Context';
 
 export default function Staking() {
   const { currentAccount, loading, chainId } = useWeb3Context();

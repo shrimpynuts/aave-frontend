@@ -329,7 +329,7 @@ msgstr "Before supplying"
 msgid "Blocked Address"
 msgstr "Blocked Address"
 
-#: pages/index.page.tsx
+#: pages/_sites/[site]/index.page.tsx
 #: src/components/transactions/Borrow/BorrowModal.tsx
 #: src/modules/dashboard/lists/BorrowAssetsList/BorrowAssetsListItem.tsx
 #: src/modules/dashboard/lists/BorrowAssetsList/BorrowAssetsListMobileItem.tsx
@@ -473,6 +473,7 @@ msgstr "Cap reached. Lower supply amount"
 msgid "Choose one of the on-ramp services"
 msgstr "Choose one of the on-ramp services"
 
+#: src/modules/custom/RegisterDomain.tsx
 #: src/modules/dashboard/DashboardTopPanel.tsx
 msgid "Claim"
 msgstr "Claim"
@@ -1283,7 +1284,7 @@ msgstr "Not enough voting power to participate in this proposal"
 msgid "Not reached"
 msgstr "Not reached"
 
-#: pages/v3-migration.page.tsx
+#: pages/_sites/[site]/v3-migration.page.tsx
 #: src/modules/dashboard/lists/BorrowedPositionsList/BorrowedPositionsList.tsx
 msgid "Nothing borrowed yet"
 msgstr "Nothing borrowed yet"
@@ -1292,7 +1293,7 @@ msgstr "Nothing borrowed yet"
 msgid "Nothing staked"
 msgstr "Nothing staked"
 
-#: pages/v3-migration.page.tsx
+#: pages/_sites/[site]/v3-migration.page.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsList.tsx
 msgid "Nothing supplied yet"
 msgstr "Nothing supplied yet"
@@ -1317,7 +1318,7 @@ msgstr "Operation not supported"
 msgid "Oracle price"
 msgstr "Oracle price"
 
-#: pages/reserve-overview.page.tsx
+#: pages/_sites/[site]/reserve-overview.page.tsx
 msgid "Overview"
 msgstr "Overview"
 
@@ -1350,7 +1351,7 @@ msgstr "Please connect a wallet to view your personal information here."
 msgid "Please connect your wallet to get free testnet assets."
 msgstr "Please connect your wallet to get free testnet assets."
 
-#: pages/v3-migration.page.tsx
+#: pages/_sites/[site]/v3-migration.page.tsx
 msgid "Please connect your wallet to see migration tool."
 msgstr "Please connect your wallet to see migration tool."
 
@@ -1466,6 +1467,10 @@ msgstr "Received"
 #: src/components/transactions/GovDelegation/GovDelegationModalContent.tsx
 msgid "Recipient address"
 msgstr "Recipient address"
+
+#: src/modules/custom/RegisterDomain.tsx
+msgid "Register your domain"
+msgstr "Register your domain"
 
 #: src/components/WalletConnection/WalletSelector.tsx
 msgid "Rejected connection request"
@@ -1697,11 +1702,11 @@ msgstr "Stablecoin"
 msgid "Stake"
 msgstr "Stake"
 
-#: pages/staking.staking.tsx
+#: pages/_sites/[site]/staking.staking.tsx
 msgid "Stake AAVE"
 msgstr "Stake AAVE"
 
-#: pages/staking.staking.tsx
+#: pages/_sites/[site]/staking.staking.tsx
 msgid "Stake ABPT"
 msgstr "Stake ABPT"
 
@@ -1749,7 +1754,7 @@ msgstr "Supplied"
 msgid "Supplied asset amount"
 msgstr "Supplied asset amount"
 
-#: pages/index.page.tsx
+#: pages/_sites/[site]/index.page.tsx
 #: src/components/transactions/Supply/SupplyModal.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListItem.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListMobileItem.tsx
@@ -2224,6 +2229,10 @@ msgstr "Version 2"
 msgid "Version 3"
 msgstr "Version 3"
 
+#: src/modules/custom/RegisterDomain.tsx
+msgid "View"
+msgstr "View"
+
 #: src/modules/governance/proposal/VotersListContainer.tsx
 msgid "View all votes"
 msgstr "View all votes"
@@ -2303,7 +2312,7 @@ msgstr "Wallets are provided by External Providers and by selecting you agree to
 msgid "We couldn't find any assets related to your search. Try again with a different asset name, symbol, or address."
 msgstr "We couldn't find any assets related to your search. Try again with a different asset name, symbol, or address."
 
-#: pages/staking.staking.tsx
+#: pages/_sites/[site]/staking.staking.tsx
 msgid "We couldn’t detect a wallet. Connect a wallet to stake and view your balance."
 msgstr "We couldn’t detect a wallet. Connect a wallet to stake and view your balance."
 
@@ -2442,7 +2451,7 @@ msgstr "Your current loan to value based on your collateral supplied."
 msgid "Your health factor and loan to value determine the assurance of your collateral. To avoid liquidations you can supply more collateral or repay borrow positions."
 msgstr "Your health factor and loan to value determine the assurance of your collateral. To avoid liquidations you can supply more collateral or repay borrow positions."
 
-#: pages/reserve-overview.page.tsx
+#: pages/_sites/[site]/reserve-overview.page.tsx
 #: src/modules/governance/VotingPowerInfoPanel.tsx
 #: src/modules/reserve-overview/ReserveActions.tsx
 #: src/modules/reserve-overview/ReserveActions.tsx
